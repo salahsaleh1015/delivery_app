@@ -1,4 +1,7 @@
 
+import 'package:delivery_app/features/on_boarding/views/on_boarding_one_view.dart';
+import 'package:delivery_app/features/on_boarding/widgets/custom_on_boarding_scaffold.dart';
+import 'package:delivery_app/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 //كتنساش تغير اسم التطبيق و ال package name
 
@@ -11,9 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   const MaterialApp(
+    return    MaterialApp(
+      theme: getApplicationTheme(),
       debugShowCheckedModeBanner: false,
       title: 'Yalla Delivery app',
+      home: const YallaDeliveryApp(),
     );
   }
 }
@@ -23,7 +28,7 @@ class YallaDeliveryApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return  CustomOnBoardingScaffold();
   }
 }
 
