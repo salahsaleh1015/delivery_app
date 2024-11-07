@@ -7,6 +7,7 @@ ThemeData getApplicationTheme() {
   return ThemeData(
       scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
       textTheme: TextTheme(
+        labelMedium: getRegularTextStyle(color: ColorManager.secondaryTextColor, fontSize: FontSize.s14),
         titleMedium: getSemiBoldTextStyle(color: ColorManager.white,fontSize: FontSize.s14),
         headlineSmall: getSemiBoldTextStyle(color: ColorManager.black, fontSize: FontSize.s24),
         bodySmall: getMediumTextStyle(color: ColorManager.primary, fontSize: FontSize.s14),

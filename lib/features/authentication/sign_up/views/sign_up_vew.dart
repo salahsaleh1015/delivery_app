@@ -1,6 +1,8 @@
 import 'package:delivery_app/features/authentication/authentication_widgets/auth_social_botton.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/or_break_widget.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/phone_input_text_field_widget.dart';
+import 'package:delivery_app/features/authentication/authentication_widgets/terms_text.dart';
+import 'package:delivery_app/features/authentication/verification/view/verification_view.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
 import 'package:delivery_app/features/global_widgets/global_circular_button_widget.dart';
 import 'package:delivery_app/resources/assets_manager.dart';
@@ -26,7 +28,9 @@ class SignUpView extends StatelessWidget {
               height: AppSize.s70,
             ),
             GlobalCircularButtonWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+              },
               iconColor: ColorManager.black,
               icon: Icons.arrow_back,
             ),
@@ -59,7 +63,9 @@ class SignUpView extends StatelessWidget {
             GlobalButtonWidget(
               width: double.infinity,
               text: "CONTINUE",
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const VerificationView()));
+              },
             ),
             const SizedBox(
               height: 250,
@@ -72,14 +78,7 @@ class SignUpView extends StatelessWidget {
             const SizedBox(
               height: AppSize.s10,
             ),
-            Text(
-              "By signing up, you agree to our Terms of Serviceand Privacy Policy",
-              style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                fontSize: FontSize.s12
-              ),
-              textAlign: TextAlign.center,
-
-            )
+            const TermsText(),
           ],
         ),
       ),
