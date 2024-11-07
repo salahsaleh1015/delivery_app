@@ -11,6 +11,7 @@ class ColorManager {
   static Color inputFillColor = const Color(0xffe6e0e9);
   static Color error = const Color(0xffe61f34);
   static Color scaffoldBackgroundColor = const Color(0xfff0f0f0);
+  static Color socialButtonColor = const Color(0xffcac4d0);
 
   static Color lightDotColor = const Color(0xfff5baa8);
 
