@@ -1,9 +1,11 @@
-import 'package:delivery_app/features/on_boarding/widgets/custom_on_boarding_scaffold.dart';
+import 'package:delivery_app/features/authentication/sign_up/views/sign_up_vew.dart';
 import 'package:delivery_app/features/on_boarding/widgets/dot_widget.dart';
-import 'package:delivery_app/features/widgets/custom_global_button_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 
 import 'package:flutter/material.dart';
+
+import '../../../resources/values_manager.dart';
+import '../../global_widgets/global_button_widget.dart';
 
 class OnBoardingOneView extends StatelessWidget {
    const OnBoardingOneView({super.key});
@@ -14,18 +16,18 @@ class OnBoardingOneView extends StatelessWidget {
     return  Column(
       children: [
         const SizedBox(
-          height: 50,
+          height: AppSize.s50,
         ),
         Image.asset("assets/images/on_boarding_one.png"),
         const SizedBox(
-          height: 50,
+          height: AppSize.s50,
         ),
         Text(
           "Welcome to",
           style: Theme.of(context).textTheme.displaySmall,
         ),
         const SizedBox(
-          height: 10,
+          height:AppSize.s10,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,7 +43,7 @@ class OnBoardingOneView extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: 15,
+          height: AppSize.s15,
         ),
         Text(
           "Discover the fastest and easiest way to manage and deliver orders",
@@ -49,7 +51,7 @@ class OnBoardingOneView extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height:45,
+          height:AppSize.s25,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -58,7 +60,7 @@ class OnBoardingOneView extends StatelessWidget {
               color: ColorManager.primary,
             ),
             const SizedBox(
-              width: 15,
+              width: AppSize.s15,
             ),
             DotWidget(
               color: ColorManager.lightPrimary,
@@ -66,11 +68,14 @@ class OnBoardingOneView extends StatelessWidget {
           ],
         ),
         const SizedBox(
-          height: 45,
+          height: AppSize.s33,
         ),
-        CustomGlobalButtonWidget(
+        GlobalButtonWidget(
+          width: AppSize.s312,
           text: "START",
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUpView()));
+          },
         )
       ],
     );
