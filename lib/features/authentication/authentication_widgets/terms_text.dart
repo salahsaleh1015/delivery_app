@@ -13,7 +13,7 @@ class TermsText extends StatelessWidget {
       style: Theme.of(context)
           .textTheme
           .labelSmall!
-          .copyWith(fontSize: FontSize.s12.sp),
+          ,
       textAlign: TextAlign.center,
     );
   }

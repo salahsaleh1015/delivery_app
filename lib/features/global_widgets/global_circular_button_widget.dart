@@ -17,10 +17,10 @@ class GlobalCircularButtonWidget extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: CircleAvatar(
-        backgroundColor: ColorManager.lightPrimary,
+        backgroundColor: ColorManager.lightSecondary,
         radius: AppSize.s25.r,
         child: Icon(
-          size: AppSize.s30.r,
+          size: AppSize.s25.r,
           icon,
           color: iconColor,
         ),

@@ -20,7 +20,7 @@ class GlobalButtonWidget extends StatelessWidget {
           color: ColorManager.primary,
           borderRadius: BorderRadius.circular(AppSize.s100.r),
         ),
-        height: AppSize.s48.h,
+        height: AppSize.s40.h,
         width: width,
         child: Center(
           child: Text(text,style: Theme.of(context).textTheme.titleSmall,),

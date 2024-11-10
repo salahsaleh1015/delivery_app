@@ -15,15 +15,13 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
     return Column(
       children: [
          SizedBox(
-          height: AppSize.s50.h,
+          height: AppSize.s75.h,
         ),
         SizedBox(
-            height: AppSize.s415.h,
+            height: AppSize.s315.h,
             width: AppSize.s408.w,
             child: Image.asset("assets/images/on_boarding_two.png")),
-         SizedBox(
-          height: AppSize.s80.h,
-        ),
+
         Text(
           "Ready to Join",
           style: Theme.of(context).textTheme.displayMedium,
@@ -37,7 +35,7 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
          SizedBox(
-          height: AppSize.s15.h,
+          height: AppSize.s20.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

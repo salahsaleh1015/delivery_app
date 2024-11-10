@@ -17,16 +17,15 @@ class OnBoardingBodyOneWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-         SizedBox(
+SizedBox(
           height: AppSize.s50.h,
-        ),
+),
         SizedBox(
-            height: AppSize.s415.h,
+          //color: Colors.black,
+            height: AppSize.s315.h,
             width: AppSize.s408.w,
             child: Image.asset("assets/images/on_boarding_one.png")),
-         SizedBox(
-          height: AppSize.s50.h,
-        ),
+
         Text(
           "Welcome to",
           style: Theme.of(context).textTheme.displaySmall,

@@ -34,8 +34,8 @@ class MyDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: AppSize.s2.h,
-      width:AppSize.s180.w,
+      height: AppSize.s1.h,
+      width:AppSize.s135.w,
       color: ColorManager.socialButtonColor,
     );
   }
