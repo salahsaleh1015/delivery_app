@@ -4,6 +4,7 @@ import 'package:delivery_app/features/on_boarding/widgets/dot_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../resources/values_manager.dart';
 
 class OnBoardingBodyTwoWidget extends StatelessWidget {
@@ -13,27 +14,30 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const SizedBox(
-          height: AppSize.s50,
+         SizedBox(
+          height: AppSize.s50.h,
         ),
-        Image.asset("assets/images/on_boarding_two.png"),
-        const SizedBox(
-          height: AppSize.s80,
+        SizedBox(
+            height: AppSize.s415.h,
+            width: AppSize.s408.w,
+            child: Image.asset("assets/images/on_boarding_two.png")),
+         SizedBox(
+          height: AppSize.s80.h,
         ),
         Text(
           "Ready to Join",
           style: Theme.of(context).textTheme.displayMedium,
         ),
-        const SizedBox(
-          height: AppSize.s15,
+         SizedBox(
+          height: AppSize.s15.h,
         ),
         Text(
           "Log in or create your account now to get started and manage your experience, make requests, or deliver orders.",
           style: Theme.of(context).textTheme.labelSmall,
           textAlign: TextAlign.center,
         ),
-        const SizedBox(
-          height: AppSize.s15,
+         SizedBox(
+          height: AppSize.s15.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,26 +45,26 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
             DotWidget(
               color: ColorManager.lightPrimary,
             ),
-            const SizedBox(
-              width: AppSize.s15,
+             SizedBox(
+              width: AppSize.s15.w,
             ),
             DotWidget(
               color: ColorManager.primary,
             ),
           ],
         ),
-        const SizedBox(
-          height: AppSize.s37,
+         SizedBox(
+          height: AppSize.s37.h,
         ),
         GlobalButtonWidget(
-          width: AppSize.s312,
+          width: AppSize.s312.w,
           text: "CREATE ACCOUNT",
           onTap: () {
             Navigator.pushNamed(context, Routes.signInRoute);
           },
         ),
-        const SizedBox(
-          height: AppSize.s20,
+         SizedBox(
+          height: AppSize.s20.h,
         ),
         TextButton(
           onPressed: () {

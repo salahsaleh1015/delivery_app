@@ -4,6 +4,7 @@ import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/routes_manager.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../resources/values_manager.dart';
 import '../../global_widgets/global_button_widget.dart';
@@ -16,19 +17,22 @@ class OnBoardingBodyOneWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        const SizedBox(
-          height: AppSize.s50,
+         SizedBox(
+          height: AppSize.s50.h,
         ),
-        Image.asset("assets/images/on_boarding_one.png"),
-        const SizedBox(
-          height: AppSize.s50,
+        SizedBox(
+            height: AppSize.s415.h,
+            width: AppSize.s408.w,
+            child: Image.asset("assets/images/on_boarding_one.png")),
+         SizedBox(
+          height: AppSize.s50.h,
         ),
         Text(
           "Welcome to",
           style: Theme.of(context).textTheme.displaySmall,
         ),
-        const SizedBox(
-          height:AppSize.s10,
+         SizedBox(
+          height:AppSize.s10.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,16 +47,16 @@ class OnBoardingBodyOneWidget extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(
-          height: AppSize.s15,
+         SizedBox(
+          height: AppSize.s15.h,
         ),
         Text(
           "Discover the fastest and easiest way to manage and deliver orders",
           style: Theme.of(context).textTheme.labelSmall,
           textAlign: TextAlign.center,
         ),
-        const SizedBox(
-          height:AppSize.s25,
+         SizedBox(
+          height:AppSize.s25.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -60,19 +64,19 @@ class OnBoardingBodyOneWidget extends StatelessWidget {
             DotWidget(
               color: ColorManager.primary,
             ),
-            const SizedBox(
-              width: AppSize.s15,
+             SizedBox(
+              width: AppSize.s15.w,
             ),
             DotWidget(
               color: ColorManager.lightPrimary,
             ),
           ],
         ),
-        const SizedBox(
-          height: AppSize.s33,
+         SizedBox(
+          height: AppSize.s33.h,
         ),
         GlobalButtonWidget(
-          width: AppSize.s312,
+          width: AppSize.s312.w,
           text: "START",
           onTap: () {
             Navigator.pushNamed(context, Routes.signUpRoute);

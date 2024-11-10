@@ -1,5 +1,6 @@
 import 'package:delivery_app/resources/font_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class TermsText extends StatelessWidget {
@@ -12,7 +13,7 @@ class TermsText extends StatelessWidget {
       style: Theme.of(context)
           .textTheme
           .labelSmall!
-          .copyWith(fontSize: FontSize.s12),
+          .copyWith(fontSize: FontSize.s12.sp),
       textAlign: TextAlign.center,
     );
   }

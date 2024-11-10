@@ -3,6 +3,7 @@
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class OrBreakWidget extends StatelessWidget {
@@ -14,12 +15,12 @@ class OrBreakWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const MyDivider(),
-        const SizedBox(
-          width: AppSize.s10,
+         SizedBox(
+          width: AppSize.s10.w,
         ),
         Text("OR", style: Theme.of(context).textTheme.labelSmall),
-        const SizedBox(
-          width: AppSize.s10,
+         SizedBox(
+          width: AppSize.s10.w,
         ),
         const MyDivider(),
       ],
@@ -33,8 +34,8 @@ class MyDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: AppSize.s2,
-      width:AppSize.s180,
+      height: AppSize.s2.h,
+      width:AppSize.s180.w,
       color: ColorManager.socialButtonColor,
     );
   }

@@ -1,5 +1,8 @@
+import 'package:delivery_app/main.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
+import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class DotWidget extends StatelessWidget {
@@ -8,8 +11,8 @@ class DotWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      height: 10,
-      width: 10,
+      height:AppSize.s10.h,
+      width:AppSize.s10.w,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: color,

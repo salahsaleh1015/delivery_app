@@ -11,6 +11,7 @@ import 'package:delivery_app/resources/font_manager.dart';
 import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -19,14 +20,14 @@ class SignUpView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppPadding.p20,
+        padding: EdgeInsets.symmetric(
+          horizontal: AppPadding.p20.w,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: AppSize.s70,
+             SizedBox(
+              height: AppSize.s70.h,
             ),
             GlobalCircularButtonWidget(
               onTap: () {
@@ -35,31 +36,31 @@ class SignUpView extends StatelessWidget {
               iconColor: ColorManager.black,
               icon: Icons.arrow_back,
             ),
-            const SizedBox(
-              height: AppSize.s50,
+             SizedBox(
+              height: AppSize.s50.h,
             ),
             Text("CREATE AN ACCOUNT",
                 style: Theme.of(context).textTheme.headlineSmall),
-            const SizedBox(
-              height: AppSize.s20,
+             SizedBox(
+              height: AppSize.s20.h,
             ),
             Text(
                 "Join us today to unlock features, manage requests, and stay connected with your delivery needs!",
                 style: Theme.of(context).textTheme.labelSmall),
-            const SizedBox(
-              height: AppSize.s50,
+             SizedBox(
+              height: AppSize.s50.h,
             ),
             Text("Phone Number",
                 style: Theme.of(context)
                     .textTheme
                     .labelSmall!
                     .copyWith(color: ColorManager.black)),
-            const SizedBox(
-              height: AppSize.s10,
+             SizedBox(
+              height: AppSize.s10.h,
             ),
             const PhoneInputTextFieldWidget(),
-            const SizedBox(
-              height: AppSize.s30,
+             SizedBox(
+              height: AppSize.s30.h,
             ),
             GlobalButtonWidget(
               width: double.infinity,
@@ -68,20 +69,20 @@ class SignUpView extends StatelessWidget {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const VerificationView()));
               },
             ),
-            const SizedBox(
-              height: AppSize.s250,
+             SizedBox(
+              height: AppSize.s250.h,
             ),
             const OrBreakWidget(),
-            const SizedBox(
-              height: AppSize.s30,
+             SizedBox(
+              height: AppSize.s30.h,
             ),
              AuthSocialButton(
               onTap: (){
                 Navigator.pushNamed(context, Routes.verificationRoute);
               },
             ),
-            const SizedBox(
-              height: AppSize.s10,
+             SizedBox(
+              height: AppSize.s10.h,
             ),
             const TermsText(),
           ],

@@ -1,4 +1,4 @@
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/on_boarding/views/on_boarding_view.dart';
 import 'package:delivery_app/resources/routes_manager.dart';
@@ -15,13 +15,17 @@ class YallaDeliveryApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      theme: getApplicationTheme(),
-      debugShowCheckedModeBanner: false,
-      title: 'Yalla Delivery app',
-      onGenerateRoute:RouteGenerator.getRoute,
-      initialRoute: Routes.splashRoute,
+    return ScreenUtilInit(
+      designSize: const Size(360, 690),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (context, child) => MaterialApp(
+        theme: getApplicationTheme(),
+        debugShowCheckedModeBanner: false,
+        title: 'Yalla Delivery app',
+        onGenerateRoute: RouteGenerator.getRoute,
+        initialRoute: Routes.splashRoute,
+      ),
     );
   }
 }
-

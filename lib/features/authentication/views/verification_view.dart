@@ -8,6 +8,7 @@ import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class VerificationView extends StatelessWidget {
   const VerificationView({super.key});
@@ -16,14 +17,14 @@ class VerificationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: AppPadding.p20,
+        padding:  EdgeInsets.symmetric(
+          horizontal: AppPadding.p20.w,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(
-              height: AppSize.s70,
+             SizedBox(
+              height: AppSize.s70.h,
             ),
             GlobalCircularButtonWidget(
               onTap: () {
@@ -32,19 +33,19 @@ class VerificationView extends StatelessWidget {
               iconColor: ColorManager.black,
               icon: Icons.arrow_back,
             ),
-            const SizedBox(
-              height: AppSize.s50,
+             SizedBox(
+              height: AppSize.s50.h,
             ),
             Text("Verify Your Account",
                 style: Theme.of(context).textTheme.headlineSmall),
-            const SizedBox(
-              height: AppSize.s20,
+             SizedBox(
+              height: AppSize.s20.h,
             ),
             Text(
                 "We’ve sent a 6-digit code to your registered phone number. Please enter the code below to confirm your account.",
                 style: Theme.of(context).textTheme.labelSmall),
-            const SizedBox(
-              height: AppSize.s50,
+             SizedBox(
+              height: AppSize.s50.h,
             ),
             OtpTextField(
               focusedBorderColor: ColorManager.hintColor,
@@ -69,8 +70,8 @@ class VerificationView extends StatelessWidget {
                     });
               }, // end onSubmit
             ),
-            const SizedBox(
-              height: AppSize.s30,
+             SizedBox(
+              height: AppSize.s30.h,
             ),
             GlobalButtonWidget(
               width: double.infinity,
@@ -115,12 +116,12 @@ class VerificationView extends StatelessWidget {
                         .copyWith(color: ColorManager.black)),
               ],
             ),
-            const SizedBox(
-              height: AppSize.s180,
+             SizedBox(
+              height: AppSize.s180.h,
             ),
             const OrBreakWidget(),
-            const SizedBox(
-              height: AppSize.s30,
+             SizedBox(
+              height: AppSize.s30.h,
             ),
             AuthSocialButton(
               onTap: () {
@@ -131,8 +132,8 @@ class VerificationView extends StatelessWidget {
                 );
               },
             ),
-            const SizedBox(
-              height: AppSize.s10,
+             SizedBox(
+              height: AppSize.s10.h,
             ),
             const TermsText(),
           ],
