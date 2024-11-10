@@ -6,12 +6,12 @@ import '../../../resources/colors_manager.dart';
 
 
 class AuthSocialButton extends StatelessWidget {
-  const AuthSocialButton({super.key});
-
+  const AuthSocialButton({super.key, required this.onTap});
+ final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: onTap,
       child: Container(
         height: AppSize.s48,
         width: double.infinity,
@@ -23,7 +23,7 @@ class AuthSocialButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset(ImageAssets.googleIcon, width:AppSize.s30,height: AppSize.s30,),
+              Image.asset(AssetsManager.googleIcon, width:AppSize.s30,height: AppSize.s30,),
               const SizedBox(
                 width: AppSize.s10,
               ),

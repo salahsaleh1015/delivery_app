@@ -1,14 +1,15 @@
-import 'package:delivery_app/features/authentication/sign_up/views/sign_up_vew.dart';
+import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/on_boarding/widgets/dot_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
+import 'package:delivery_app/resources/routes_manager.dart';
 
 import 'package:flutter/material.dart';
 
 import '../../../resources/values_manager.dart';
 import '../../global_widgets/global_button_widget.dart';
 
-class OnBoardingOneView extends StatelessWidget {
-   const OnBoardingOneView({super.key});
+class OnBoardingBodyOneWidget extends StatelessWidget {
+   const OnBoardingBodyOneWidget({super.key});
 
 
   @override
@@ -74,7 +75,7 @@ class OnBoardingOneView extends StatelessWidget {
           width: AppSize.s312,
           text: "START",
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUpView()));
+            Navigator.pushNamed(context, Routes.signUpRoute);
           },
         )
       ],

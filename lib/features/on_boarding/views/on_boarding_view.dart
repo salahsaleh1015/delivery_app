@@ -1,10 +1,10 @@
-import 'package:delivery_app/features/on_boarding/views/on_boarding_one_view.dart';
-import 'package:delivery_app/features/on_boarding/views/on_boarding_two_view.dart';
+import 'package:delivery_app/features/on_boarding/widgets/on_boarding_body_one_widget.dart';
+import 'package:delivery_app/features/on_boarding/widgets/on_boarding_body_two_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:flutter/material.dart';
 
-class CustomOnBoardingScaffold extends StatelessWidget {
-  CustomOnBoardingScaffold({
+class OnBoardingView extends StatelessWidget {
+  OnBoardingView({
     super.key,
   });
 
@@ -27,8 +27,8 @@ class CustomOnBoardingScaffold extends StatelessWidget {
         child: PageView(
           scrollDirection: Axis.horizontal,
           children: const [
-            OnBoardingOneView(),
-            OnBoardingTwoView(),
+            OnBoardingBodyOneWidget(),
+            OnBoardingBodyTwoWidget(),
           ],
         ),
       ),

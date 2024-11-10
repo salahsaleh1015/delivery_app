@@ -2,11 +2,11 @@ import 'package:delivery_app/features/authentication/authentication_widgets/auth
 import 'package:delivery_app/features/authentication/authentication_widgets/or_break_widget.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/phone_input_text_field_widget.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/terms_text.dart';
-import 'package:delivery_app/features/authentication/verification/view/verification_view.dart';
+import 'package:delivery_app/features/authentication/views/verification_view.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
 import 'package:delivery_app/features/global_widgets/global_circular_button_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
-import 'package:delivery_app/resources/font_manager.dart';
+import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 
@@ -69,13 +69,17 @@ class SignInView extends StatelessWidget {
               },
             ),
             const SizedBox(
-              height: 250,
+              height: AppSize.s250,
             ),
             const OrBreakWidget(),
             const SizedBox(
               height: AppSize.s30,
             ),
-            const AuthSocialButton(),
+             AuthSocialButton(
+              onTap: (){
+                Navigator.pushNamed(context, Routes.verificationRoute);
+              }
+            ),
             const SizedBox(
               height: AppSize.s10,
             ),
