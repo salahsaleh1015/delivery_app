@@ -54,7 +54,6 @@ class VerificationView extends StatelessWidget {
                 focusedBorderColor: ColorManager.hintColor,
                 enabledBorderColor: ColorManager.primary,
                 numberOfFields: 6,
-
                 //set to true to show as box or false to show as dash
                 showFieldAsBox: true,
                 //runs when a code is typed in

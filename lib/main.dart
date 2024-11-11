@@ -1,13 +1,22 @@
+import 'package:delivery_app/translations/codegen_loader.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
-import 'package:delivery_app/features/on_boarding/views/on_boarding_view.dart';
 import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 //كتنساش تغير اسم التطبيق و ال package name
 
-void main() {
-  runApp(const YallaDeliveryApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  runApp(EasyLocalization(
+    assetLoader: const CodegenLoader(),
+      supportedLocales: const [Locale('en'), Locale('ar')],
+      path: 'assets/translations',
+      fallbackLocale: const Locale(
+        'ar',
+      ),
+      child: const YallaDeliveryApp()));
 }
 
 class YallaDeliveryApp extends StatelessWidget {
@@ -20,6 +29,9 @@ class YallaDeliveryApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         theme: getApplicationTheme(),
         debugShowCheckedModeBanner: false,
         title: 'Yalla Delivery app',
