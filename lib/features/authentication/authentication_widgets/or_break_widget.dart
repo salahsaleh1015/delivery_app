@@ -18,7 +18,7 @@ class OrBreakWidget extends StatelessWidget {
          SizedBox(
           width: AppSize.s10.w,
         ),
-        Text("OR", style: Theme.of(context).textTheme.labelSmall),
+        Text("او", style: Theme.of(context).textTheme.labelSmall),
          SizedBox(
           width: AppSize.s10.w,
         ),

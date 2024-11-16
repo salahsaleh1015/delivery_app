@@ -9,7 +9,7 @@ class TermsText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Text(
-      "By signing up, you agree to our Terms of Serviceand Privacy Policy",
+      "بتسجيلك، فإنك توافق على شروط الخدمة وسياستنا للخصوصية.",
       style: Theme.of(context)
           .textTheme
           .labelSmall!

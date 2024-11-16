@@ -27,7 +27,7 @@ SizedBox(
             child: Image.asset("assets/images/on_boarding_one.png")),
 
         Text(
-          "Welcome to",
+          "أهلاً بك في",
           style: Theme.of(context).textTheme.displaySmall,
         ),
          SizedBox(
@@ -37,11 +37,11 @@ SizedBox(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Yalla ",
+              "يلا ",
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             Text(
-              "Delivery",
+              "ديلفري",
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ],
@@ -50,7 +50,7 @@ SizedBox(
           height: AppSize.s15.h,
         ),
         Text(
-          "Discover the fastest and easiest way to manage and deliver orders",
+          "اكتشف أسرع وأسهل طريقة لإدارة طلباتك وتوصيلها بكل يسر وسلاسة",
           style: Theme.of(context).textTheme.labelSmall,
           textAlign: TextAlign.center,
         ),
@@ -76,7 +76,7 @@ SizedBox(
         ),
         GlobalButtonWidget(
           width: AppSize.s312.w,
-          text: "START",
+          text: "ابدا",
           onTap: () {
             Navigator.pushNamed(context, Routes.signUpRoute);
           },

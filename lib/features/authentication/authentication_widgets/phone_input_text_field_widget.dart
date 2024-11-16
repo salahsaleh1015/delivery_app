@@ -15,7 +15,7 @@ class PhoneInputTextFieldWidget extends StatelessWidget {
 
           focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: ColorManager.primary)),
-          hintText: 'Enter your phone number',
+          hintText: 'أدخل رقم هاتفك',
           hintStyle: Theme.of(context)
               .textTheme
               .labelSmall!

@@ -39,13 +39,13 @@ class VerificationView extends StatelessWidget {
                SizedBox(
                 height: AppSize.s20.h,
               ),
-              Text("Verify Your Account",
+              Text("تحقق من حسابك",
                   style: Theme.of(context).textTheme.headlineSmall),
                SizedBox(
                 height: AppSize.s20.h,
               ),
               Text(
-                  "We’ve sent a 6-digit code to your registered phone number. Please enter the code below to confirm your account.",
+                  "لقد أرسلنا رمز مكون من 6 أرقام إلى رقم هاتفك المسجل. يرجى إدخال الرمز أدناه لتأكيد حسابك.",
                   style: Theme.of(context).textTheme.labelSmall),
                SizedBox(
                 height: AppSize.s50.h,
@@ -77,18 +77,24 @@ class VerificationView extends StatelessWidget {
               ),
               GlobalButtonWidget(
                 width: double.infinity,
-                text: "SUBMIT CODE",
-                onTap: () {},
+                text: "إرسال الرمز",
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                    context,
+                    Routes.mainLayoutRoute,
+                        (Route<dynamic> route) => false,
+                  );
+                },
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Didn't receive your code?",
+                  Text("لم تستلم رمزك؟",
                       style: Theme.of(context).textTheme.labelMedium!),
                   TextButton(
                       onPressed: () {},
                       child: Text(
-                        "Resend",
+                        "أعد إرساله ",
                         style: Theme.of(context)
                             .textTheme
                             .labelMedium!
@@ -105,7 +111,7 @@ class VerificationView extends StatelessWidget {
                           .labelMedium!
                           .copyWith(color: ColorManager.black)),
                   Text(
-                    "35s",
+                    "35 ثانية ",
                     style: Theme.of(context)
                         .textTheme
                         .labelMedium!

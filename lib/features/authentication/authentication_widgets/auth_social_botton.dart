@@ -32,7 +32,7 @@ class AuthSocialButton extends StatelessWidget {
                 width: AppSize.s10.w,
               ),
               Text(
-                "CONTINUE WITH GOOGLE",
+                "متابعة باستخدام جوجل",
                 style: Theme.of(context)
                     .textTheme
                     .bodySmall!

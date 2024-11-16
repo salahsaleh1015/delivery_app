@@ -40,18 +40,18 @@ class SignUpView extends StatelessWidget {
                SizedBox(
                 height: AppSize.s20.h,
               ),
-              Text("CREATE AN ACCOUNT",
+              Text("أنشئ حسابًا",
                   style: Theme.of(context).textTheme.headlineSmall),
                SizedBox(
                 height: AppSize.s20.h,
               ),
               Text(
-                  "Join us today to unlock features, manage requests, and stay connected with your delivery needs!",
+                  "انضم إلينا اليوم لفتح الميزات، إدارة الطلبات، والبقاء على اتصال باحتياجاتك من التوصيل!",
                   style: Theme.of(context).textTheme.labelSmall),
                SizedBox(
                 height: AppSize.s50.h,
               ),
-              Text("Phone Number",
+              Text("رقم الهاتف",
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium),
@@ -64,7 +64,7 @@ class SignUpView extends StatelessWidget {
               ),
               GlobalButtonWidget(
                 width: double.infinity,
-                text: "CONTINUE",
+                text: "متابعة",
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) => const VerificationView()));
                 },

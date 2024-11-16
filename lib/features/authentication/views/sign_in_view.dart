@@ -42,18 +42,18 @@ class SignInView extends StatelessWidget {
               SizedBox(
                 height: AppSize.s20.h,
               ),
-              Text("WELCOME BACK!",
+              Text("مرحباً بعودتك!",
                   style: Theme.of(context).textTheme.headlineSmall),
               SizedBox(
                 height: AppSize.s20.h,
               ),
               Text(
-                  "Log in to your account to access your orders and manage your preferences.",
+                  "قم بتسجيل الدخول إلى حسابك للوصول إلى طلباتك وإدارة تفضيلاتك.",
                   style: Theme.of(context).textTheme.labelSmall),
               SizedBox(
                 height: AppSize.s50.h,
               ),
-              Text("Phone Number",
+              Text("رقم الهاتف",
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium),
@@ -66,9 +66,9 @@ class SignInView extends StatelessWidget {
               ),
               GlobalButtonWidget(
                 width: double.infinity,
-                text: "CONTINUE",
+                text: "متابعة",
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const VerificationView()));
+                  Navigator.pushNamed(context, Routes.verificationRoute);
                 },
               ),
               SizedBox(
