@@ -1,7 +1,7 @@
+import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
 import 'package:delivery_app/translations/codegen_loader.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
 //كتنساش تغير اسم التطبيق و ال package name
@@ -35,11 +35,12 @@ class YallaDeliveryApp extends StatelessWidget {
         localizationsDelegates: context.localizationDelegates,
         supportedLocales: context.supportedLocales,
         locale: context.locale,
-        theme: getApplicationTheme(),
+        theme: getApplicationTheme(context),
         debugShowCheckedModeBanner: false,
         title: 'Yalla Delivery app',
-        onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: Routes.splashRoute,
+        // onGenerateRoute: RouteGenerator.getRoute,
+        // initialRoute: Routes.splashRoute,
+        home: const MainLayoutView(),
       ),
     );
   }

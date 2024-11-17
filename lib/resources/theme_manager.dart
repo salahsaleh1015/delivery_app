@@ -1,10 +1,11 @@
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/font_manager.dart';
 import 'package:delivery_app/resources/style_manager.dart';
+import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-ThemeData getApplicationTheme() {
+ThemeData getApplicationTheme(context) {
   return ThemeData(
       scaffoldBackgroundColor: ColorManager.scaffoldBackgroundColor,
       textTheme: TextTheme(
@@ -22,5 +23,20 @@ ThemeData getApplicationTheme() {
           labelSmall: getRegularTextStyle(
               color: ColorManager.secondaryTextColor, fontSize: FontSize.s12.sp),
           displaySmall: getMediumTextStyle(
-              fontSize: FontSize.s18.sp, color: ColorManager.secondaryTextColor)));
+              fontSize: FontSize.s18.sp, color: ColorManager.secondaryTextColor)),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      showUnselectedLabels: true,
+      unselectedLabelStyle:TextStyle(
+        fontSize: FontSize.s14.sp
+      ),
+      selectedLabelStyle: TextStyle(
+          fontSize: FontSize.s14.sp
+      ),
+      backgroundColor: ColorManager.white,
+      selectedItemColor: ColorManager.primary,
+      unselectedItemColor: ColorManager.hintColor
+    )
+
+
+  );
 }
