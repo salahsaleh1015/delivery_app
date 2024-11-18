@@ -49,14 +49,16 @@ SizedBox(
          SizedBox(
           height: AppSize.s15.h,
         ),
-        Text(
-          "اكتشف أسرع وأسهل طريقة لإدارة طلباتك وتوصيلها بكل يسر وسلاسة",
-          style: Theme.of(context).textTheme.labelSmall,
-          textAlign: TextAlign.center,
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: AppPadding.p20.w),
+          height: AppSize.s100,
+          child: Text(
+            "اكتشف أسرع وأسهل طريقة لإدارة طلباتك وتوصيلها بكل يسر وسلاسة",
+            style: Theme.of(context).textTheme.labelSmall,
+            textAlign: TextAlign.center,
+          ),
         ),
-         SizedBox(
-          height:AppSize.s25.h,
-        ),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

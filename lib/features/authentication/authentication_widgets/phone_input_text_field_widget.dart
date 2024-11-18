@@ -19,7 +19,7 @@ class PhoneInputTextFieldWidget extends StatelessWidget {
           hintStyle: Theme.of(context)
               .textTheme
               .labelSmall!
-              .copyWith(color: ColorManager.hintColor,fontSize: FontSize.s16.sp),
+              .copyWith(color: ColorManager.hintColor,),
           fillColor: ColorManager.inputFillColor,
           filled: true),
     );

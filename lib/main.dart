@@ -1,4 +1,5 @@
 import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
+import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/translations/codegen_loader.g.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,7 +41,7 @@ class YallaDeliveryApp extends StatelessWidget {
         title: 'Yalla Delivery app',
         // onGenerateRoute: RouteGenerator.getRoute,
         // initialRoute: Routes.splashRoute,
-        home: const MainLayoutView(),
+      home: const MainLayoutView(),
       ),
     );
   }

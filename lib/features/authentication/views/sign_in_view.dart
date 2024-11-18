@@ -43,7 +43,7 @@ class SignInView extends StatelessWidget {
                 height: AppSize.s20.h,
               ),
               Text("مرحباً بعودتك!",
-                  style: Theme.of(context).textTheme.headlineSmall),
+                  style: Theme.of(context).textTheme.displayMedium),
               SizedBox(
                 height: AppSize.s20.h,
               ),

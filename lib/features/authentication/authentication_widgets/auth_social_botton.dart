@@ -35,8 +35,7 @@ class AuthSocialButton extends StatelessWidget {
                 "متابعة باستخدام جوجل",
                 style: Theme.of(context)
                     .textTheme
-                    .bodySmall!
-                    .copyWith(color: ColorManager.black),
+                    .bodyMedium,
               ),
             ],
           ),

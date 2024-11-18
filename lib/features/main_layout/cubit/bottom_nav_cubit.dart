@@ -1,6 +1,7 @@
 
 
 
+import 'package:delivery_app/features/home/view/home_view.dart';
 import 'package:delivery_app/features/main_layout/widgets/bottom_nav_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -45,7 +46,7 @@ class BottomNavCubit extends Cubit<BottomNavStates> {
   ];
 
   List<Widget> screens = [
-    Container(),
+    HomeView(),
     Container(),
     Container(),
     Container()

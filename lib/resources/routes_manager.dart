@@ -1,6 +1,7 @@
 import 'package:delivery_app/features/authentication/views/sign_in_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
+import 'package:delivery_app/features/home/view/home_view.dart';
 import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
 import 'package:delivery_app/features/on_boarding/views/on_boarding_view.dart';
 import 'package:delivery_app/features/splash/splash_view.dart';
@@ -12,10 +13,9 @@ class Routes {
   static const String signInRoute = "/signIn";
   static const String signUpRoute = "/signUp";
   static const String verificationRoute = "/verification";
-  static const String registerRoute = "/register";
-  static const String forgetPasswordRoute = "/forgetPassword";
   static const String mainLayoutRoute = "/mainLayout";
-  static const String mainDetailsRoute = "/mainDetails";
+  static const String homeRoute = "/home";
+
 }
 
 class RouteGenerator {
@@ -33,6 +33,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => OnBoardingView());
       case Routes.mainLayoutRoute:
         return MaterialPageRoute(builder: (_) => const MainLayoutView());
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return unDefinedRoute();
     }

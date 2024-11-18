@@ -40,7 +40,7 @@ class VerificationView extends StatelessWidget {
                 height: AppSize.s20.h,
               ),
               Text("تحقق من حسابك",
-                  style: Theme.of(context).textTheme.headlineSmall),
+                  style: Theme.of(context).textTheme.displayMedium),
                SizedBox(
                 height: AppSize.s20.h,
               ),
@@ -90,42 +90,42 @@ class VerificationView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("لم تستلم رمزك؟",
-                      style: Theme.of(context).textTheme.labelMedium!),
+                      style: Theme.of(context).textTheme.labelSmall!),
                   TextButton(
                       onPressed: () {},
                       child: Text(
                         "أعد إرساله ",
                         style: Theme.of(context)
                             .textTheme
-                            .labelMedium!
+                            .labelSmall!
                             .copyWith(color: ColorManager.primary),
                       )),
                   Text("In",
                       style: Theme.of(context)
                           .textTheme
-                          .labelMedium!
+                          .labelSmall!
                           .copyWith(color: ColorManager.black)),
                   Text("(",
                       style: Theme.of(context)
                           .textTheme
-                          .labelMedium!
+                          .labelSmall!
                           .copyWith(color: ColorManager.black)),
                   Text(
                     "35 ثانية ",
                     style: Theme.of(context)
                         .textTheme
-                        .labelMedium!
+                        .labelSmall!
                         .copyWith(color: ColorManager.primary),
                   ),
                   Text(")",
                       style: Theme.of(context)
                           .textTheme
-                          .labelMedium!
+                          .labelSmall!
                           .copyWith(color: ColorManager.black)),
                 ],
               ),
                SizedBox(
-                height: AppSize.s100.h,
+                height: AppSize.s80.h,
               ),
               const OrBreakWidget(),
                SizedBox(
