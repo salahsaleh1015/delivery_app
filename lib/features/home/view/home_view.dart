@@ -1,5 +1,6 @@
 import 'package:delivery_app/features/global_widgets/global_circular_button_widget.dart';
-import 'package:delivery_app/features/home/widgets/items/search_card_widget.dart';
+import 'package:delivery_app/features/home/view/vendors_view.dart';
+import 'package:delivery_app/features/home/widgets/items/search_card_item_widget.dart';
 import 'package:delivery_app/features/home/widgets/lists/advertisement_list_widget.dart';
 import 'package:delivery_app/features/home/widgets/lists/vendor_list_widget.dart';
 import 'package:delivery_app/resources/assets_manager.dart';
@@ -41,7 +42,7 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: AppSize.s25.h,
             ),
-            const SearchCardWidget(),
+            const SearchCardItemWidget(),
             SizedBox(
               height: AppSize.s30.h,
             ),
@@ -61,15 +62,18 @@ class HomeView extends StatelessWidget {
                 ),),
                const Spacer(),
                Text("عرض الكل",style: Theme.of(context).textTheme.bodySmall,),
-                IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward,color: ColorManager.primary,),)
+                IconButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const VendorsView(),));
+                }, icon: Icon(Icons.arrow_forward,color: ColorManager.primary,),)
               ],
             ),
             SizedBox(
               height: AppSize.s10.h,
             ),
-            const VendorListWidget(),
+            const VendorListWidget(
+              axis: Axis.horizontal,
+            ),
 
-        
           ],
         ),
       ),

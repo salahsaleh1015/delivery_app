@@ -41,6 +41,7 @@ dependencies:
   easy_localization: ^3.0.7
   font_awesome_flutter: ^10.8.0
   flutter_bloc: ^8.1.6
+  flutter_rating_stars: ^1.1.0
 
 
 #  flutter_native_splash: ^2.4.2

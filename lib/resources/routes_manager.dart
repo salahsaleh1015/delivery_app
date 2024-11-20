@@ -1,7 +1,9 @@
 import 'package:delivery_app/features/authentication/views/sign_in_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
+import 'package:delivery_app/features/home/view/choose_delivery_view.dart';
 import 'package:delivery_app/features/home/view/home_view.dart';
+import 'package:delivery_app/features/home/view/shop_details_view.dart';
 import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
 import 'package:delivery_app/features/on_boarding/views/on_boarding_view.dart';
 import 'package:delivery_app/features/splash/splash_view.dart';
@@ -15,6 +17,8 @@ class Routes {
   static const String verificationRoute = "/verification";
   static const String mainLayoutRoute = "/mainLayout";
   static const String homeRoute = "/home";
+  static const String shopDetailsRoute = "/shopDetails";
+  static const String chooseDeliveryRoute = "/chooseDelivery";
 
 }
 
@@ -35,6 +39,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const MainLayoutView());
       case Routes.homeRoute:
         return MaterialPageRoute(builder: (_) => const HomeView());
+        case Routes.chooseDeliveryRoute:
+        return MaterialPageRoute(builder: (_) => const ChooseDeliveryView());
+      case Routes.shopDetailsRoute:
+        return MaterialPageRoute(builder: (_) => const ShopDetailsView());
       default:
         return unDefinedRoute();
     }

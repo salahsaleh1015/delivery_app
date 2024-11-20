@@ -13,7 +13,10 @@ class ColorManager {
   static Color error = const Color(0xffe61f34);
   static Color scaffoldBackgroundColor = const Color(0xfff0f0f0);
   static Color socialButtonColor = const Color(0xffcac4d0);
-static Color starRateColor = const Color(0xffffc107);
   static Color lightDotColor = const Color(0xfff5baa8);
+  static Color circleButtonColor = const Color(0xfffc9c82);
+  static Color darkGrayColor = const Color(0xff666666);
+  static Color activeRateColor = const Color(0xffffc107);
+  static Color inActiveRateColor = const Color(0xffa3a3a3);
 
 }

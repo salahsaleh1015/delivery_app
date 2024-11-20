@@ -8,21 +8,22 @@ class GlobalCircularButtonWidget extends StatelessWidget {
       {super.key,
       required this.onTap,
       required this.icon,
-      required this.iconColor});
+       this.iconColor, this.circleColor});
   final VoidCallback onTap;
   final IconData icon;
-  final Color iconColor;
+  final Color? iconColor;
+  final Color? circleColor;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: CircleAvatar(
-        backgroundColor: ColorManager.lightSecondary,
+        backgroundColor: circleColor ?? ColorManager.lightSecondary,
         radius: AppSize.s25.r,
         child: Icon(
           size: AppSize.s25.r,
           icon,
-          color: iconColor,
+          color: iconColor??ColorManager.black,
         ),
       ),
     );

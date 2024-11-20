@@ -12,5 +12,7 @@ class AssetsManager {
   static const String googleIcon = "$imagePath/google_icon.png";
   static const String userAvatar = "$imagePath/user_avatar.png";
   static const String shopTest = "$imagePath/shop_test.png";
+  static const String productTest = "$imagePath/product_test.png";
+  static const String deliveryAvatar = "$imagePath/delivery_avatar.png";
 
 }

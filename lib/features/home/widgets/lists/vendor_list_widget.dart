@@ -6,19 +6,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../resources/values_manager.dart';
 class VendorListWidget extends StatelessWidget {
-  const VendorListWidget({super.key});
-
+  const VendorListWidget({super.key, required this.axis, this.verticalSpace, this.separatorHeight, this.itemWidth});
+final Axis axis;
+final double? verticalSpace;
+  final double? separatorHeight;
+  final double?itemWidth;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       
       width: double.infinity,
-      height: AppSize.s315.h,
+      height: verticalSpace ??AppSize.s315.h,
       child: ListView.separated(
-        separatorBuilder: (context, index) =>  SizedBox(width: AppSize.s10.w),
-        scrollDirection: Axis.horizontal,
+        separatorBuilder: (context, index) =>  SizedBox(width: AppSize.s10.w,height:separatorHeight??0 ,),
+        scrollDirection:axis,
         itemCount: 10,
-        itemBuilder: (context, index) => const VendorItemWidget(),
+        itemBuilder: (context, index) => VendorItemWidget(
+          itemWidth: itemWidth,
+        ),
       ),
     );
   }

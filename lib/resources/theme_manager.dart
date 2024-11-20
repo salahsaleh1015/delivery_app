@@ -20,7 +20,9 @@ ThemeData getApplicationTheme(context) {
         headlineMedium: getRegularTextStyle(color: ColorManager.black, fontSize: FontSize.s16.sp) ,
         bodyMedium: getMediumTextStyle(color: ColorManager.black, fontSize: FontSize.s16.sp),
         headlineSmall: getRegularTextStyle(color: ColorManager.secondaryTextColor,fontSize: FontSize.s14.sp),
-        labelMedium: getRegularTextStyle(color: ColorManager.secondaryTextColor, fontSize: FontSize.s12.sp)
+        labelMedium: getRegularTextStyle(color: ColorManager.secondaryTextColor, fontSize: FontSize.s12.sp),
+        headlineLarge: getBoldTextStyle(color: ColorManager.primary, fontSize: FontSize.s20.sp),
+        titleMedium: getSemiBoldTextStyle(color: ColorManager.black, fontSize: FontSize.s20.sp),
 
 
           ),

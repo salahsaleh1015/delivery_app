@@ -3,8 +3,8 @@ import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SearchCardWidget extends StatelessWidget {
-  const SearchCardWidget({super.key});
+class SearchCardItemWidget extends StatelessWidget {
+  const SearchCardItemWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
