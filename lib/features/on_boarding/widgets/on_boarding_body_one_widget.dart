@@ -80,7 +80,7 @@ SizedBox(
           width: AppSize.s312.w,
           text: "ابدا",
           onTap: () {
-            Navigator.pushNamed(context, Routes.signUpRoute);
+            Navigator.pushNamed(context, SignUpView.id);
           },
         )
       ],

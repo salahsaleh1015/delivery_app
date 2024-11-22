@@ -63,7 +63,7 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
           width: AppSize.s312.w,
           text: "إنشاء حساب",
           onTap: () {
-            Navigator.pushNamed(context, Routes.signInRoute);
+            Navigator.pushNamed(context, SignInView.id);
           },
         ),
          SizedBox(
@@ -71,7 +71,7 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, Routes.signInRoute);
+            Navigator.pushNamed(context, SignInView.id);
           },
           child: Text(
             "لدي حساب بالفعل",

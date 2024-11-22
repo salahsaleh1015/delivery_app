@@ -13,7 +13,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
-
+  static String id = 'SignUpView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +66,7 @@ class SignUpView extends StatelessWidget {
                 width: double.infinity,
                 text: "متابعة",
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const VerificationView()));
+                  Navigator.pushNamed(context, VerificationView.id);
                 },
               ),
                SizedBox(
@@ -78,7 +78,7 @@ class SignUpView extends StatelessWidget {
               ),
                AuthSocialButton(
                 onTap: (){
-                  Navigator.pushNamed(context, Routes.verificationRoute);
+                  Navigator.pushNamed(context, VerificationView.id);
                 },
               ),
                SizedBox(

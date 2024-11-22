@@ -8,7 +8,7 @@ import '../../../resources/values_manager.dart';
 
 class VendorsView extends StatelessWidget {
   const VendorsView({super.key});
-
+  static String id = 'VendorsView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

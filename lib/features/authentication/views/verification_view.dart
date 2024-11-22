@@ -3,6 +3,7 @@ import 'package:delivery_app/features/authentication/authentication_widgets/or_b
 import 'package:delivery_app/features/authentication/authentication_widgets/terms_text.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
 import 'package:delivery_app/features/global_widgets/global_circular_button_widget.dart';
+import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
@@ -12,7 +13,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class VerificationView extends StatelessWidget {
   const VerificationView({super.key});
-
+  static String id = 'VerificationView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +82,7 @@ class VerificationView extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(
                     context,
-                    Routes.mainLayoutRoute,
+                    MainLayoutView.id,
                         (Route<dynamic> route) => false,
                   );
                 },
@@ -135,7 +136,7 @@ class VerificationView extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(
                     context,
-                    Routes.mainLayoutRoute,
+                    MainLayoutView.id,
                     (Route<dynamic> route) => false,
                   );
                 },

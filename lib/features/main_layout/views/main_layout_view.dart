@@ -7,7 +7,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainLayoutView extends StatelessWidget {
   const MainLayoutView({super.key});
-
+  static String id = 'MainLayoutView';
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

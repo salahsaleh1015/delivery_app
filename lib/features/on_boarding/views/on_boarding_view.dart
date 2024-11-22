@@ -7,7 +7,7 @@ class OnBoardingView extends StatelessWidget {
   OnBoardingView({
     super.key,
   });
-
+  static String id = 'OnBoardingView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

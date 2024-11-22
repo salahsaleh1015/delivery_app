@@ -12,7 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ShopDetailsView extends StatelessWidget {
   const ShopDetailsView({super.key});
-
+  static String id = 'ShopDetailsView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

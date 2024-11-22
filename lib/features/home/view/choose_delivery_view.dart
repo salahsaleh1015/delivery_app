@@ -8,7 +8,7 @@ import '../../../resources/values_manager.dart';
 
 class ChooseDeliveryView extends StatelessWidget {
   const ChooseDeliveryView({super.key});
-
+  static String id = 'ChooseDeliveryView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

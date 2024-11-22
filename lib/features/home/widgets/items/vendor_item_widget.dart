@@ -90,11 +90,7 @@ class VendorItemWidget extends StatelessWidget {
                   GlobalButtonWidget(
                       text: "اطلب الآن",
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ShopDetailsView(),
-                            ));
+                        Navigator.pushNamed(context, ShopDetailsView.id);
                       },
                       width: AppSize.s225.w)
                 ],

@@ -36,11 +36,7 @@ class PriceCardItemWidget extends StatelessWidget {
             GlobalButtonWidget(
               text: "استمر",
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ChooseDeliveryView(),
-                    ));
+                Navigator.pushNamed(context, ChooseDeliveryView.id);
               },
               width: AppSize.s180.w,
             )
