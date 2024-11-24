@@ -15,17 +15,20 @@ class GlobalButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          color: ColorManager.primary,
-          borderRadius: BorderRadius.circular(AppSize.s100.r),
-        ),
-        height: AppSize.s40.h,
-        width: width,
-        child: Center(
-          child: Text(text,style: Theme.of(context).textTheme.titleSmall,),
-        ),
+      child: Padding(
+        padding: EdgeInsets.all(AppPadding.p10.r),
+        child: Container(
+          decoration: BoxDecoration(
+            color: ColorManager.primary,
+            borderRadius: BorderRadius.circular(AppSize.s100.r),
+          ),
+          height: AppSize.s40.h,
+          width: width,
+          child: Center(
+            child: Text(text,style: Theme.of(context).textTheme.titleSmall,),
+          ),
 
+        ),
       ),
     );
   }

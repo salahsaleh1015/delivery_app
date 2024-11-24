@@ -2,6 +2,7 @@ import 'package:delivery_app/features/global_widgets/global_app_bar.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
 import 'package:delivery_app/features/global_widgets/global_delivery_card_widget.dart';
 import 'package:delivery_app/features/global_widgets/lists/global_delivery_cards_list_widget.dart';
+import 'package:delivery_app/features/home/view/summary_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../resources/values_manager.dart';
@@ -38,13 +39,12 @@ class ChooseDeliveryView extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(AppPadding.p10.r),
-        child: GlobalButtonWidget(
-          text: "استمر",
-          onTap: () {},
-          width: double.infinity,
-        ),
+      bottomNavigationBar: GlobalButtonWidget(
+        text: "استمر",
+        onTap: () {
+          Navigator.pushNamed(context, SummaryView.id);
+        },
+        width: double.infinity,
       ),
     );
   }

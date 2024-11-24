@@ -36,7 +36,7 @@ class VendorItemWidget extends StatelessWidget {
         ),
         Container(
             width:itemWidth?? AppSize.s250.w,
-            height: AppSize.s150.h,
+            height: AppSize.s160.h,
             decoration: BoxDecoration(
                 color: ColorManager.white,
                 borderRadius: BorderRadius.only(

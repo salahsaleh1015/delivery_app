@@ -1,4 +1,4 @@
-import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
+
 import 'package:delivery_app/resources/routes_manager.dart';
 import 'package:delivery_app/translations/codegen_loader.g.dart';
 import 'package:easy_localization/easy_localization.dart';

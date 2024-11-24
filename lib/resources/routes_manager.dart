@@ -4,6 +4,7 @@ import 'package:delivery_app/features/authentication/views/verification_view.dar
 import 'package:delivery_app/features/home/view/choose_delivery_view.dart';
 import 'package:delivery_app/features/home/view/home_view.dart';
 import 'package:delivery_app/features/home/view/shop_details_view.dart';
+import 'package:delivery_app/features/home/view/summary_view.dart';
 import 'package:delivery_app/features/home/view/vendors_view.dart';
 import 'package:delivery_app/features/main_layout/views/main_layout_view.dart';
 import 'package:delivery_app/features/on_boarding/views/on_boarding_view.dart';
@@ -20,4 +21,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   ShopDetailsView.id: (context) => const ShopDetailsView(),
   ChooseDeliveryView.id: (context) => const ChooseDeliveryView(),
   VendorsView.id: (context) => const VendorsView(),
+  SummaryView.id: (context) => const SummaryView(),
 };
