@@ -30,7 +30,9 @@ class ShopImageItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             GlobalCircularButtonWidget(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+              },
               icon: Icons.arrow_back,
               iconColor: ColorManager.white,
               circleColor: ColorManager.circleButtonColor,

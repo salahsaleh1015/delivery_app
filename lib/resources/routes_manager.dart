@@ -1,6 +1,7 @@
 import 'package:delivery_app/features/authentication/views/sign_in_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
+import 'package:delivery_app/features/delivery/views/delivery_view.dart';
 import 'package:delivery_app/features/home/view/choose_delivery_view.dart';
 import 'package:delivery_app/features/home/view/home_view.dart';
 import 'package:delivery_app/features/home/view/shop_details_view.dart';
@@ -22,4 +23,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   ChooseDeliveryView.id: (context) => const ChooseDeliveryView(),
   VendorsView.id: (context) => const VendorsView(),
   SummaryView.id: (context) => const SummaryView(),
+  DeliveryView.id: (context) => const DeliveryView(),
 };

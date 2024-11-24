@@ -7,7 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GlobalDeliveryCardsListWidget extends StatefulWidget {
-  const GlobalDeliveryCardsListWidget({super.key});
+  const GlobalDeliveryCardsListWidget({super.key, required this.height});
+
+  final double height;
 
   @override
   State<GlobalDeliveryCardsListWidget> createState() => _GlobalDeliveryCardsListWidgetState();
@@ -33,7 +35,7 @@ class _GlobalDeliveryCardsListWidgetState extends State<GlobalDeliveryCardsListW
   Widget build(BuildContext context) {
     return  SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.65,
+      height: widget.height,
       child: ListView.separated(
           itemCount: 10,
           separatorBuilder: (context, index) => SizedBox(

@@ -35,7 +35,9 @@ class ChooseDeliveryView extends StatelessWidget {
             SizedBox(
               height: AppSize.s10.h,
             ),
-           const GlobalDeliveryCardsListWidget(),
+            GlobalDeliveryCardsListWidget(
+             height: MediaQuery.of(context).size.height*0.65,
+           ),
           ],
         ),
       ),
