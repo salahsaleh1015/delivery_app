@@ -1,5 +1,5 @@
-
 import 'package:delivery_app/features/global_widgets/global_dialog.dart';
+import 'package:delivery_app/features/global_widgets/global_text_field_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ class EditLocationCardItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Card.outlined(
+    return Card.outlined(
       color: ColorManager.white,
       elevation: AppSize.s5.r,
       child: Padding(
@@ -21,33 +21,85 @@ class EditLocationCardItemWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("موقع التوصيل:",style: Theme.of(context).textTheme.headlineSmall,),
+                Text(
+                  "موقع التوصيل:",
+                  style: Theme.of(context).textTheme.headlineSmall,
+                ),
                 SizedBox(
-
-                    width: MediaQuery.of(context).size.width*0.4,
-
-                    child: Text("مدينة 6 أكتوبر، محافظة الجيزة",
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    child: Text(
+                      "مدينة 6 أكتوبر، محافظة الجيزة",
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.headlineSmall!.copyWith(color: ColorManager.black),)),
+                      style: Theme.of(context)
+                          .textTheme
+                          .headlineSmall!
+                          .copyWith(color: ColorManager.black),
+                    )),
                 TextButton(
-                  onPressed: (){
-                    showCustomDialog(context);
+                  onPressed: () {
+                    locationDialog(context);
                   },
                   child: Row(
                     children: [
-                      Text("تغيير",style: Theme.of(context).textTheme.labelLarge,),
-                      Icon(Icons.arrow_forward,color: ColorManager.primary,)
+                      Text(
+                        "تغيير",
+                        style: Theme.of(context).textTheme.labelLarge,
+                      ),
+                      Icon(
+                        Icons.arrow_forward,
+                        color: ColorManager.primary,
+                      )
                     ],
-                  ),),
+                  ),
+                ),
               ],
-            )
-        ),
+            )),
       ),
     );
   }
 
+  void locationDialog(BuildContext context) {
+               showCustomDialog(context,
+        actionButtonCallBack: () {},
+        actionButtonHint: "تغيير",
+        dialogTitle: "تغيير موقع التوصيل",
+        content: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text(
+                  "موقع التوصيل: ",
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                SizedBox(
+                    width:
+                        MediaQuery.of(context).size.width * 0.4,
+                    child: Text("مدينة 6 أكتوبر، محافظة الجيزة",
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyMedium)),
+              ],
+            ),
+            SizedBox(
+              height: AppSize.s20.h,
+            ),
+            Text(
+              "موقعك الان بالتفصيل",
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            SizedBox(
+              height: AppSize.s20.h,
+            ),
+            GlobalTextFieldWidget(
+              height: AppSize.s100.h,
+              hintText: "أدخل موقعك الان بالتفصيل",
+              textInputType: TextInputType.multiline,
+            ),
+          ],
+        ));
+  }
 }
-
-
-

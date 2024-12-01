@@ -1,3 +1,4 @@
+import 'package:delivery_app/features/global_widgets/global_dialog.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,9 @@ class LogoutButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return    GestureDetector(
-      onTap: (){},
+      onTap: (){
+        logoutDialog(context);
+      },
       child: Container(
         width: double.infinity,
         height: AppSize.s40.h,
@@ -32,5 +35,22 @@ class LogoutButtonWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void logoutDialog(BuildContext context) {
+
+    showCustomDialog(context,dialogTitle: "تسجيل الخروج",
+
+        actionButtonColor: ColorManager.error,
+        actionButtonHint: "تسجيل الخروج",actionButtonCallBack: (){},content:Column(
+          children: [
+            SizedBox(height: AppSize.s20.h,),
+            Text("هل أنت متأكد أنك تريد تسجيل الخروج؟",style: Theme.of(context).textTheme.headlineMedium!.copyWith(
+                  color: ColorManager.hintColor,
+
+                ),),
+            SizedBox(height: AppSize.s20.h,),
+          ],
+        ) );
   }
 }

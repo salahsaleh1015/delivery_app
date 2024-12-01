@@ -1,4 +1,6 @@
 import 'package:delivery_app/features/account/views/account_view.dart';
+import 'package:delivery_app/features/account/views/ads_partner_view.dart';
+import 'package:delivery_app/features/account/views/edit_account_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_in_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
@@ -26,4 +28,6 @@ Map<String, Widget Function(BuildContext)> routes = {
   SummaryView.id: (context) => const SummaryView(),
   DeliveryView.id: (context) => const DeliveryView(),
   AccountView.id: (context) => const AccountView(),
+  EditAccountView.id: (context) => const EditAccountView(),
+  AdsPartnerView.id: (context) => const AdsPartnerView(),
 };

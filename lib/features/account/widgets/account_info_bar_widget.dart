@@ -1,3 +1,4 @@
+import 'package:delivery_app/features/account/views/edit_account_view.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:flutter/material.dart';
 class AccountInfoBarWidget extends StatelessWidget {
@@ -11,7 +12,7 @@ class AccountInfoBarWidget extends StatelessWidget {
         Text("المعلومات الشخصية",style: Theme.of(context).textTheme.bodyMedium,),
         TextButton(
           onPressed: (){
-
+     Navigator.pushNamed(context, EditAccountView.id);
           },
           child: Row(
             children: [

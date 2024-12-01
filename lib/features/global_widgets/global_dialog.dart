@@ -8,15 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<void> showCustomDialog(
-  BuildContext context,
-) {
+  BuildContext context, {
+  required Widget content,
+  required String dialogTitle,
+  required String actionButtonHint,
+  required VoidCallback actionButtonCallBack,
+  Color? actionButtonColor,
+}) {
   return showDialog<void>(
     context: context,
     barrierDismissible:
         true, // User can dismiss the dialog by tapping outside of it
     builder: (BuildContext context) {
       return AlertDialog(
-
+        backgroundColor: ColorManager.white,
         contentPadding: EdgeInsets.all(AppPadding.p8.r),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -26,7 +31,7 @@ Future<void> showCustomDialog(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "تغيير موقع التوصيل",
+                  dialogTitle,
                   style: Theme.of(context)
                       .textTheme
                       .bodySmall!
@@ -52,39 +57,10 @@ Future<void> showCustomDialog(
               thickness: 1,
               color: ColorManager.secondaryTextColor,
             ),
-
             SizedBox(
               height: AppSize.s10.h,
             ),
-        Row(
-          children: [
-            Text(
-              "موقع التوصيل: ",
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            SizedBox(
-                width: MediaQuery.of(context).size.width * 0.4,
-                child: Text("مدينة 6 أكتوبر، محافظة الجيزة",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: Theme.of(context).textTheme.bodyMedium)),
-          ],
-        ),
-            SizedBox(
-              height: AppSize.s20.h,
-            ),
-            Text(
-              "موقعك الان بالتفصيل",
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            SizedBox(
-              height: AppSize.s20.h,
-            ),
-            GlobalTextFieldWidget(
-              height: AppSize.s100.h,
-              hintText: "أدخل موقعك الان بالتفصيل",
-              textInputType: TextInputType.multiline,
-            ),
+            content,
           ],
         ),
         actions: <Widget>[
@@ -98,9 +74,10 @@ Future<void> showCustomDialog(
                 },
               ),
               GlobalButtonWidget(
-                onTap: () {},
+                color: actionButtonColor ?? ColorManager.primary,
+                onTap: actionButtonCallBack,
                 width: MediaQuery.of(context).size.width * 0.32,
-                text: "تغيير",
+                text: actionButtonHint,
               ),
             ],
           )

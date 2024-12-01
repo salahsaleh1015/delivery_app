@@ -8,7 +8,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class AdvertisementItemWidget extends StatelessWidget {
-  const AdvertisementItemWidget({super.key});
+  const AdvertisementItemWidget({super.key, this.height, this.width});
+final double? height , width;
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +30,13 @@ class AdvertisementItemWidget extends StatelessWidget {
             ),
             child: Image.asset(
                 fit: BoxFit.fill,
-                width: AppSize.s150.w,
-                height: AppSize.s90.h,
+                width:width?? AppSize.s150.w,
+                height:height?? AppSize.s90.h,
                 AssetsManager.shopTest),
           ),
         ),
         Container(
-          width: AppSize.s150.w,
+          width:width?? AppSize.s150.w,
           height: AppSize.s40.h,
           decoration: BoxDecoration(
               color: ColorManager.white,
