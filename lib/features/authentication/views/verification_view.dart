@@ -125,26 +125,7 @@ class VerificationView extends StatelessWidget {
                           .copyWith(color: ColorManager.black)),
                 ],
               ),
-               SizedBox(
-                height: AppSize.s80.h,
-              ),
-              const OrBreakWidget(),
-               SizedBox(
-                height: AppSize.s30.h,
-              ),
-              AuthSocialButton(
-                onTap: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    MainLayoutView.id,
-                    (Route<dynamic> route) => false,
-                  );
-                },
-              ),
-               SizedBox(
-                height: AppSize.s10.h,
-              ),
-              const TermsText(),
+
             ],
           ),
         ),

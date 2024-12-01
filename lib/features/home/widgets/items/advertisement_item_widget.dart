@@ -29,14 +29,14 @@ class AdvertisementItemWidget extends StatelessWidget {
             ),
             child: Image.asset(
                 fit: BoxFit.fill,
-                width: AppSize.s250.w,
-                height: AppSize.s130.h,
+                width: AppSize.s150.w,
+                height: AppSize.s90.h,
                 AssetsManager.shopTest),
           ),
         ),
         Container(
-          width: AppSize.s250.w,
-          height: AppSize.s50.h,
+          width: AppSize.s150.w,
+          height: AppSize.s40.h,
           decoration: BoxDecoration(
               color: ColorManager.white,
               borderRadius: BorderRadius.only(

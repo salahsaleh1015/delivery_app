@@ -14,7 +14,7 @@ class AdvertisementListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: AppSize.s200.h,
+      height: AppSize.s150.h,
       child: ListView.separated(
         separatorBuilder: (context, index) =>  SizedBox(width: AppSize.s10.w),
         scrollDirection: Axis.horizontal,

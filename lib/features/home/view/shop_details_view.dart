@@ -31,7 +31,7 @@ class ShopDetailsView extends StatelessWidget {
               color: ColorManager.socialButtonColor,
             ),
             SizedBox(
-              height: AppSize.s20.h,
+              height: AppSize.s10.h,
             ),
            const ProductsSectionItemWidget(),
             SizedBox(

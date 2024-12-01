@@ -1,6 +1,6 @@
 import 'package:delivery_app/features/authentication/authentication_widgets/auth_social_botton.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/or_break_widget.dart';
-import 'package:delivery_app/features/authentication/authentication_widgets/phone_input_text_field_widget.dart';
+import 'package:delivery_app/features/global_widgets/global_text_field_widget.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/terms_text.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
@@ -60,7 +60,10 @@ class SignInView extends StatelessWidget {
               SizedBox(
                 height: AppSize.s10.h,
               ),
-              const PhoneInputTextFieldWidget(),
+              const GlobalTextFieldWidget(
+                hintText: "رقم الهاتف",
+                textInputType: TextInputType.phone,
+              ),
               SizedBox(
                 height: AppSize.s30.h,
               ),
@@ -71,22 +74,7 @@ class SignInView extends StatelessWidget {
                   Navigator.pushNamed(context, VerificationView.id);
                 },
               ),
-              SizedBox(
-                height: AppSize.s100.h,
-              ),
-              const OrBreakWidget(),
-              SizedBox(
-                height: AppSize.s30.h,
-              ),
-              AuthSocialButton(
-                onTap: (){
-                  Navigator.pushNamed(context, VerificationView.id);
-                },
-              ),
-              SizedBox(
-                height: AppSize.s25.h,
-              ),
-              const TermsText(),
+
             ],
           ),
         ),

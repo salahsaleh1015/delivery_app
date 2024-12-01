@@ -16,7 +16,7 @@ class ProductCardsListWidget extends StatelessWidget {
         child: ListView.separated(
             separatorBuilder:(context, index) =>  SizedBox(width: AppSize.s10.w),
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount: 1,
             itemBuilder:
                 (context, index) => const ProductCardItemWidget()));
   }

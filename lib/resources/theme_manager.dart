@@ -23,6 +23,7 @@ ThemeData getApplicationTheme(context) {
         labelMedium: getRegularTextStyle(color: ColorManager.secondaryTextColor, fontSize: FontSize.s12.sp),
         headlineLarge: getBoldTextStyle(color: ColorManager.primary, fontSize: FontSize.s20.sp),
         titleMedium: getSemiBoldTextStyle(color: ColorManager.black, fontSize: FontSize.s20.sp),
+        labelLarge: getMediumTextStyle(color: ColorManager.primary, fontSize: FontSize.s14.sp),
 
 
           ),

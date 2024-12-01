@@ -1,3 +1,4 @@
+import 'package:delivery_app/features/account/views/account_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_in_view.dart';
 import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
@@ -24,4 +25,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   VendorsView.id: (context) => const VendorsView(),
   SummaryView.id: (context) => const SummaryView(),
   DeliveryView.id: (context) => const DeliveryView(),
+  AccountView.id: (context) => const AccountView(),
 };

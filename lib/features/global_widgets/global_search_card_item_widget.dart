@@ -3,9 +3,10 @@ import 'package:delivery_app/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SearchCardItemWidget extends StatelessWidget {
-  const SearchCardItemWidget({super.key});
+class GlobalSearchCardItemWidget extends StatelessWidget {
+  const GlobalSearchCardItemWidget({super.key, required this.hintText});
 
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -20,7 +21,7 @@ class SearchCardItemWidget extends StatelessWidget {
 
             decoration: InputDecoration(
 
-              hintText: "بحث",
+              hintText: hintText,
               contentPadding: EdgeInsets.only(bottom: AppPadding.p15.h,),
               hintStyle: Theme.of(context).textTheme.labelSmall,
               prefixIcon: Icon(

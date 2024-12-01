@@ -1,6 +1,7 @@
 
 
 
+import 'package:delivery_app/features/account/views/account_view.dart';
 import 'package:delivery_app/features/delivery/views/delivery_view.dart';
 import 'package:delivery_app/features/home/view/home_view.dart';
 import 'package:delivery_app/features/main_layout/widgets/bottom_nav_bar_widget.dart';
@@ -50,7 +51,7 @@ class BottomNavCubit extends Cubit<BottomNavStates> {
     HomeView(),
     DeliveryView(),
     Container(),
-    Container()
+    AccountView(),
   ];
 
 }

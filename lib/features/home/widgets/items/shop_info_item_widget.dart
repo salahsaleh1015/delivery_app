@@ -36,7 +36,7 @@ class ShopInfoItemWidget extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: AppSize.s20.h,
+            height: AppSize.s10.h,
           ),
           Row(
             children: [
@@ -55,7 +55,7 @@ class ShopInfoItemWidget extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: AppSize.s20.h,
+            height: AppSize.s10.h,
           ),
           Row(
             children: [
@@ -89,7 +89,7 @@ class ShopInfoItemWidget extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: AppSize.s25.h,
+            height: AppSize.s10.h,
           ),
         ],
       ),

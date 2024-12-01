@@ -1,4 +1,5 @@
 import 'package:delivery_app/features/authentication/views/sign_in_view.dart';
+import 'package:delivery_app/features/authentication/views/sign_up_vew.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
 import 'package:delivery_app/features/on_boarding/widgets/dot_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
@@ -63,7 +64,7 @@ class OnBoardingBodyTwoWidget extends StatelessWidget {
           width: AppSize.s312.w,
           text: "إنشاء حساب",
           onTap: () {
-            Navigator.pushNamed(context, SignInView.id);
+            Navigator.pushNamed(context, SignUpView.id);
           },
         ),
          SizedBox(

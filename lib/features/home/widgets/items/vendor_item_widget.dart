@@ -1,4 +1,5 @@
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
+import 'package:delivery_app/features/global_widgets/global_secondary_button.dart';
 import 'package:delivery_app/features/home/view/shop_details_view.dart';
 import 'package:delivery_app/resources/assets_manager.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
@@ -36,7 +37,7 @@ class VendorItemWidget extends StatelessWidget {
         ),
         Container(
             width:itemWidth?? AppSize.s250.w,
-            height: AppSize.s160.h,
+            height: AppSize.s150.h,
             decoration: BoxDecoration(
                 color: ColorManager.white,
                 borderRadius: BorderRadius.only(
@@ -87,12 +88,13 @@ class VendorItemWidget extends StatelessWidget {
                   SizedBox(
                     height: AppSize.s15.h,
                   ),
-                  GlobalButtonWidget(
-                      text: "اطلب الآن",
-                      onTap: () {
-                        Navigator.pushNamed(context, ShopDetailsView.id);
-                      },
-                      width: AppSize.s225.w)
+                  GlobalSecondaryButton(
+                    width: double.infinity,
+                    onTap: (){
+                      Navigator.pushNamed(context, ShopDetailsView.id);
+                    },
+                    text: "اطلب",
+                  )
                 ],
               ),
             ))

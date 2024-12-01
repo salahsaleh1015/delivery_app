@@ -1,6 +1,7 @@
 import 'package:delivery_app/features/global_widgets/global_circular_button_widget.dart';
+import 'package:delivery_app/features/global_widgets/global_user_card_widget.dart';
 import 'package:delivery_app/features/home/view/vendors_view.dart';
-import 'package:delivery_app/features/home/widgets/items/search_card_item_widget.dart';
+import 'package:delivery_app/features/global_widgets/global_search_card_item_widget.dart';
 import 'package:delivery_app/features/home/widgets/lists/advertisement_list_widget.dart';
 import 'package:delivery_app/features/home/widgets/lists/vendor_list_widget.dart';
 import 'package:delivery_app/resources/assets_manager.dart';
@@ -27,10 +28,8 @@ class HomeView extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset(
-                  AssetsManager.userAvatar,
-                  height: AppSize.s50.h,
-                  width: AppSize.s50.w,
+                const GlobalUserCardWidget(
+                  radius: AppSize.s50, // screen util added inside the widget
                 ),
                 GlobalCircularButtonWidget(
                   onTap: () {},
@@ -42,7 +41,7 @@ class HomeView extends StatelessWidget {
             SizedBox(
               height: AppSize.s25.h,
             ),
-            const SearchCardItemWidget(),
+            const GlobalSearchCardItemWidget(hintText: 'بحث',),
             SizedBox(
               height: AppSize.s30.h,
             ),
@@ -80,3 +79,4 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+

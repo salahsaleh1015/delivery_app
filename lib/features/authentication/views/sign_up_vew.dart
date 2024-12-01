@@ -1,6 +1,6 @@
 import 'package:delivery_app/features/authentication/authentication_widgets/auth_social_botton.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/or_break_widget.dart';
-import 'package:delivery_app/features/authentication/authentication_widgets/phone_input_text_field_widget.dart';
+import 'package:delivery_app/features/global_widgets/global_text_field_widget.dart';
 import 'package:delivery_app/features/authentication/authentication_widgets/terms_text.dart';
 import 'package:delivery_app/features/authentication/views/verification_view.dart';
 import 'package:delivery_app/features/global_widgets/global_button_widget.dart';
@@ -49,17 +49,49 @@ class SignUpView extends StatelessWidget {
                   "انضم إلينا اليوم لفتح الميزات، إدارة الطلبات، والبقاء على اتصال باحتياجاتك من التوصيل!",
                   style: Theme.of(context).textTheme.labelSmall),
                SizedBox(
-                height: AppSize.s50.h,
+                height: AppSize.s20.h,
               ),
-              Text("رقم الهاتف",
+              Text("الاسم بالكامل",
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium),
                SizedBox(
                 height: AppSize.s10.h,
               ),
-              const PhoneInputTextFieldWidget(),
+              const GlobalTextFieldWidget(
+                hintText: "الاسم بالكامل",
+                textInputType: TextInputType.text,
+              ),
                SizedBox(
+                height: AppSize.s30.h,
+              ),
+              Text("رقم الهاتف",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium),
+              SizedBox(
+                height: AppSize.s10.h,
+              ),
+              const GlobalTextFieldWidget(
+                hintText: "رقم الهاتف",
+                textInputType: TextInputType.phone,
+              ),
+              SizedBox(
+                height: AppSize.s30.h,
+              ),
+              Text("العنوان بالتفصيل",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineMedium),
+              SizedBox(
+                height: AppSize.s10.h,
+              ),
+              GlobalTextFieldWidget(
+                height: AppSize.s80.h,
+                hintText: "أدخل عنوانك",
+                textInputType: TextInputType.multiline,
+              ),
+              SizedBox(
                 height: AppSize.s30.h,
               ),
               GlobalButtonWidget(
@@ -72,19 +104,8 @@ class SignUpView extends StatelessWidget {
                SizedBox(
                 height: AppSize.s100.h,
               ),
-              const OrBreakWidget(),
-               SizedBox(
-                height: AppSize.s30.h,
-              ),
-               AuthSocialButton(
-                onTap: (){
-                  Navigator.pushNamed(context, VerificationView.id);
-                },
-              ),
-               SizedBox(
-                height: AppSize.s25.h,
-              ),
-              const TermsText(),
+
+
             ],
           ),
         ),

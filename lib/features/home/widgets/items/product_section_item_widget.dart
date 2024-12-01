@@ -1,3 +1,4 @@
+import 'package:delivery_app/features/global_widgets/global_search_card_item_widget.dart';
 import 'package:delivery_app/features/home/widgets/lists/product_cards_list_widget.dart';
 import 'package:delivery_app/resources/colors_manager.dart';
 import 'package:delivery_app/resources/values_manager.dart';
@@ -9,13 +10,17 @@ class ProductsSectionItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-      padding:  EdgeInsets.symmetric(horizontal: AppPadding.p10.w),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: AppPadding.p10.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const GlobalSearchCardItemWidget(hintText: 'البحث في القائمة',),
+SizedBox(
+  height: AppSize.s10.h,
+),
           Text(
-            "الخدمات المقدمة",
+            "المنتجات المقدمة",
             style: Theme.of(context)
                 .textTheme
                 .headlineLarge!
@@ -24,13 +29,7 @@ class ProductsSectionItemWidget extends StatelessWidget {
           SizedBox(
             height: AppSize.s10.h,
           ),
-          Text(
-            "الخدمات المقدمة من ابن البلد",
-            style: Theme.of(context).textTheme.labelSmall,
-          ),
-          SizedBox(
-            height: AppSize.s10.h,
-          ),
+
           const ProductCardsListWidget(),
         ],
       ),
